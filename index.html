@@ -163,10 +163,18 @@
       </div>
     </div>
 	 <div class="words">
-        <h2>菲呀，我们已经在一起了</h2>
+        <h2>菲呀，如果没分开我们已经在一起了</h2>
         <div class="timer">
             <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
         </div>
+		<br>
+        <h5>
+			<div>
+				可是没有如果，分开的第 <b id="bd"></b> 天
+			</div>
+		</h5>
+		<br>
+		<h4>In case I don't see you，good afternoon，good evening and good night.</h4>
     </div>
 
     <script>
@@ -190,9 +198,25 @@
             document.getElementById('h').innerHTML = h;
             document.getElementById('m').innerHTML = m;
             document.getElementById('s').innerHTML = s;
+            document.getElementById('bd').innerHTML = ~~(t / 1000 / 60 / 60 / 24) - 1044;
+			/* 
+			 2020年12月4号提出分手，“祈求”拖到11日还是分手了，很伤心。我不懂得心疼你，实在很对不起你。
+			 真的很谢谢这1050天有你的陪伴，谢谢你的包容，谢谢你带给我的悲喜。我回忆里都是和你在一起开心的时刻。
+			 我很珍惜这一切，可惜太晚了，我太幼稚了，我对你的喜欢过于自私，没有能早点懂得爱不应该索求爱。
+				I roll like a desperado, 
+				now I never know where I'm gonna go, 
+				But still I ball like there's no tomorrow, 
+				"Goodnight it's over with" that's all she wrote, 
+				All she wrote, all she wrote, 
+				I said "it's over with" 
+				that's all she wrote, 
+				All she wrote, all she wrote,
+				"Goodnight it's over with" that's all she wrote.
+			*/
         }
         timer();
         setInterval(timer, 1000);
+		
     </script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/universe.js"></script>
